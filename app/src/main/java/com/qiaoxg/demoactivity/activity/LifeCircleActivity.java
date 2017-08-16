@@ -2,12 +2,18 @@ package com.qiaoxg.demoactivity.activity;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.qiaoxg.demoactivity.R;
+
+import java.io.IOException;
+import java.io.InputStream;
 
 /**
  * 介绍Activity在不同情况下的生命周期:（方法的编号见方法里边的log）
@@ -21,6 +27,7 @@ import com.qiaoxg.demoactivity.R;
 public class LifeCircleActivity extends Activity {
 
     private static final String TAG = "LifeCircleActivity";
+    Bitmap bitmap;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,6 +48,16 @@ public class LifeCircleActivity extends Activity {
                 startActivity(i);
             }
         });
+
+        ImageView iv = (ImageView) findViewById(R.id.lifeCircle_iv);
+        InputStream is = null;
+        try {
+            is = getResources().getAssets().open("pic_lifecircle.jpg");
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        bitmap = BitmapFactory.decodeStream(is);
+        iv.setImageBitmap(bitmap);
     }
 
     @Override
@@ -95,5 +112,9 @@ public class LifeCircleActivity extends Activity {
         // 当 Activity 结束（有人对 Activity 调用了 finish()），或系统为节省空间而暂时销毁该 Activity 实例时，可能会调用它。
         // 您可以通过 isFinishing() 方法区分这两种情形。
         super.onDestroy();
+
+        if(bitmap != null){
+            bitmap.recycle();
+        }
     }
 }
