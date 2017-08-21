@@ -7,6 +7,7 @@ import android.view.View;
 import android.widget.Button;
 
 import com.qiaoxg.demoactivity.activity.LifeCircleActivity;
+import com.qiaoxg.demoactivity.activity.TransmitDataActivity;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -43,6 +44,7 @@ public class MainActivity extends Activity {
             case R.id.orientationChange_btn:
                 break;
             case R.id.transmitData_btn:
+                i.setClass(this, TransmitDataActivity.class);
                 break;
         }
         startActivity(i);

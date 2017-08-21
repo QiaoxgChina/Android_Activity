@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.qiaoxg.demoactivity.activity.TransmitDataActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:background="#F5F5F5"
+        android:orientation="vertical"
+        android:padding="5dp">
+
+        <EditText
+            android:id="@+id/username_et"
+            style="@style/MyEditTextStyle"
+            android:hint="请输入用户名"/>
+
+        <EditText
+            android:id="@+id/age_et"
+            style="@style/MyEditTextStyle"
+            android:layout_marginTop="10dp"
+            android:hint="请输入年龄"
+            android:inputType="number"/>
+
+
+        <Button
+            android:id="@+id/normal_btn"
+            style="@style/MyButtonStyle"
+            android:text="传递简单数据"/>
+
+        <Button
+            android:id="@+id/serialize_btn"
+            style="@style/MyButtonStyle"
+            android:text="传递序列化数据"/>
+
+    </LinearLayout>
+
+</LinearLayout>

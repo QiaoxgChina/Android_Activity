@@ -20,6 +20,10 @@
         </activity>
         <activity android:name=".activity.OtherActivity">
         </activity>
+        <activity android:name=".activity.TransmitDataActivity">
+        </activity>
+        <activity android:name=".activity.ShowDataActivity">
+        </activity>
     </application>
 
 </manifest>
