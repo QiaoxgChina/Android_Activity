@@ -7,6 +7,7 @@ import android.view.View;
 import android.widget.Button;
 
 import com.qiaoxg.demoactivity.activity.LifeCircleActivity;
+import com.qiaoxg.demoactivity.activity.StartForResultActivity;
 import com.qiaoxg.demoactivity.activity.TransmitDataActivity;
 
 import butterknife.BindView;
@@ -40,6 +41,7 @@ public class MainActivity extends Activity {
                 i.setClass(this, LifeCircleActivity.class);
                 break;
             case R.id.startForResult_btn:
+                i.setClass(this, StartForResultActivity.class);
                 break;
             case R.id.orientationChange_btn:
                 break;

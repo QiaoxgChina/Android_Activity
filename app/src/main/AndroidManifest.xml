@@ -24,6 +24,10 @@
         </activity>
         <activity android:name=".activity.ShowDataActivity">
         </activity>
+        <activity android:name=".activity.StartForResultActivity">
+        </activity>
+        <activity android:name=".activity.InputUserInfoActivity">
+        </activity>
     </application>
 
 </manifest>

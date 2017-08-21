@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.qiaoxg.demoactivity.activity.InputUserInfoActivity">
+
+    <LinearLayout
+        style="@style/MyLinearLayoutStyle">
+
+        <EditText
+            android:id="@+id/username_et"
+            style="@style/MyEditTextStyle"
+            android:hint="请输入用户名"/>
+
+        <EditText
+            android:id="@+id/age_et"
+            style="@style/MyEditTextStyle"
+            android:layout_marginTop="10dp"
+            android:hint="请输入电话号码"
+            android:inputType="number"/>
+
+
+        <Button
+            android:id="@+id/ok_btn"
+            style="@style/MyButtonStyle"
+            android:text="提交"/>
+
+    </LinearLayout>
+</LinearLayout>
