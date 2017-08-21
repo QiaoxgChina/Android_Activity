@@ -7,8 +7,27 @@ import java.io.Serializable;
  */
 
 public class UserBean implements Serializable {
+
+    int header;
     String userName;
     String age;
+    String phone;
+
+    public int getHeader() {
+        return header;
+    }
+
+    public void setHeader(int header) {
+        this.header = header;
+    }
+
+    public String getPhone() {
+        return phone;
+    }
+
+    public void setPhone(String phone) {
+        this.phone = phone;
+    }
 
     public String getUserName() {
         return userName;

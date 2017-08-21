@@ -7,6 +7,7 @@ import android.view.View;
 import android.widget.Button;
 
 import com.qiaoxg.demoactivity.activity.LifeCircleActivity;
+import com.qiaoxg.demoactivity.activity.OrientationActivity;
 import com.qiaoxg.demoactivity.activity.StartForResultActivity;
 import com.qiaoxg.demoactivity.activity.TransmitDataActivity;
 
@@ -44,6 +45,7 @@ public class MainActivity extends Activity {
                 i.setClass(this, StartForResultActivity.class);
                 break;
             case R.id.orientationChange_btn:
+                i.setClass(this, OrientationActivity.class);
                 break;
             case R.id.transmitData_btn:
                 i.setClass(this, TransmitDataActivity.class);
